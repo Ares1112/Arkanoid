@@ -1,5 +1,5 @@
 program arkanoid;
-
+{$APPTYPE GUI}
 uses
   wincrt, graph, grafika, sterowanie;
 

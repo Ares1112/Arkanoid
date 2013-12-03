@@ -9,23 +9,23 @@
         <Filename Value="arkanoid.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="arkanoid"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="26" Y="6"/>
-        <UsageCount Value="26"/>
+        <CursorPos X="14" Y="2"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="grafika.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="grafika"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="34"/>
-        <CursorPos X="28" Y="56"/>
-        <UsageCount Value="26"/>
+        <TopLine Value="37"/>
+        <CursorPos X="17" Y="50"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -36,7 +36,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="7" Y="17"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>

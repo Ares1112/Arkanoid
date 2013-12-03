@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="menu.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="menu"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="podzespoly.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="podzespoly"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="53"/>
+        <CursorPos X="10" Y="68"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="statystyki.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Staty"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="statystyki"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="11"/>
+        <CursorPos X="11" Y="24"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="22" HistoryIndex="21">
+      <Position1>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="30" Column="52" TopLine="16"/>
+      </Position1>
+      <Position2>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="33" Column="69" TopLine="19"/>
+      </Position2>
+      <Position3>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="34" Column="69" TopLine="20"/>
+      </Position3>
+      <Position4>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="36" Column="69" TopLine="29"/>
+      </Position4>
+      <Position5>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="34" Column="17" TopLine="46"/>
+      </Position5>
+      <Position6>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="54" Column="56" TopLine="48"/>
+      </Position6>
+      <Position7>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="53" Column="56" TopLine="47"/>
+      </Position7>
+      <Position8>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="9" Column="24" TopLine="1"/>
+      </Position8>
+      <Position9>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="60" Column="5" TopLine="41"/>
+      </Position9>
+      <Position10>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="55" Column="35" TopLine="41"/>
+      </Position10>
+      <Position11>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="61" Column="14" TopLine="47"/>
+      </Position11>
+      <Position12>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="55" Column="13" TopLine="44"/>
+      </Position12>
+      <Position13>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="61" Column="12" TopLine="47"/>
+      </Position13>
+      <Position14>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="64" Column="19" TopLine="47"/>
+      </Position14>
+      <Position15>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="34" Column="17" TopLine="18"/>
+      </Position15>
+      <Position16>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="65" Column="23" TopLine="47"/>
+      </Position16>
+      <Position17>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="66" Column="19" TopLine="47"/>
+      </Position17>
+      <Position18>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="62" Column="22" TopLine="46"/>
+      </Position18>
+      <Position19>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="63" Column="13" TopLine="46"/>
+      </Position19>
+      <Position20>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="59" Column="58" TopLine="46"/>
+      </Position20>
+      <Position21>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="65" Column="8" TopLine="47"/>
+      </Position21>
+      <Position22>
+        <Filename Value="podzespoly.pas"/>
+        <Caret Line="63" Column="48" TopLine="48"/>
+      </Position22>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

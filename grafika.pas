@@ -30,7 +30,7 @@ procedure rysuj_pilke(i : Integer);
 
   begin
     FillEllipse(floor(roz_x/2)+i, floor(roz_y/2)+i, 20,20);
-    delay(10);
+    delay(1);
     SetVisualPage(1);
     SetActivePage(0);
     SetFillStyle(0,255);
@@ -51,7 +51,7 @@ procedure rysuj_paletke();
        if zmiana = 1 then
          bar(pal_x-dlugosc_paletki-zmiana,roz_y-30,pal_x-dlugosc_paletki, roz_y-20)
        else if zmiana = -1 then
-         bar(pal_x+dlugosc_paletki,roz_y-30,pal_x+dlugosc_paletki+zmiana, roz_y-20);
+         bar(pal_x+dlugosc_paletki,roz_y-30,pal_x+dlugosc_paletki-zmiana, roz_y-20);
        SetFillStyle(1,255);
        zmiana := 0;
        rysuj_pilke(i);

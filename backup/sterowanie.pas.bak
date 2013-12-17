@@ -1,13 +1,13 @@
 unit sterowanie;
 
 interface
-function steruj_paletka() : Interger;
+procedure steruj_paletka();
 var zmiana : Integer;
 implementation
 
-uses wincrt;
+uses wincrt, SDL;
 
-function steruj_paletka() : Interger;
+procedure steruj_paletka();
   var
     klawisz : Char;
   begin

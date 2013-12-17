@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="arkanoid"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir);..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\headers"/>
+      <OtherUnitFiles Value="..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\headers;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\extra;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\src;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\jpeg\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\msvcrt\x86_64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\ogg\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\zlib\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\theora\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\zip\x86_64-win64"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+  </CompilerOptions>
+</CONFIG>

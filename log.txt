@@ -1,0 +1,21 @@
+=================================
+=== ZenGL 0.3.12 (2013.08.12) ===
+=================================
+[00000002ms] Begin
+[00000004ms] Current mode: 1600 x 900
+[00000088ms] ChoosePixelFormat: zDepth = 24; stencil = 0
+[00000093ms] GL_VERSION: 1.1.0
+[00000093ms] GL_RENDERER: GDI Generic
+[00001521ms] WARNING: Cannot find 3D-accelerator! Application run in software-mode, it's very slow
+[00001523ms] GL_MAX_TEXTURE_SIZE: 1024
+[00001523ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: FALSE
+[00001523ms] GL_SGIS_GENERATE_MIPMAP: FALSE
+[00001523ms] GL_MAX_TEXTURE_UNITS_ARB: 0
+[00001523ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: FALSE
+[00001523ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0
+[00001523ms] GL_EXT_BLEND_FUNC_SEPARATE: FALSE
+[00001523ms] GL_EXT_FRAMEBUFFER_OBJECT: FALSE
+[00001523ms] WGL_PBUFFER: FALSE
+[00001523ms] Support WaitVSync: FALSE
+[00001523ms] Ogg: Initialized
+[00001523ms] Theora: Initialized

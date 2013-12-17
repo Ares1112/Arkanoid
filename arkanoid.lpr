@@ -1,13 +1,9 @@
 program arkanoid;
 {$APPTYPE GUI}
 uses
-  wincrt, graph, grafika, sterowanie;
+  wincrt, grafika, sterowanie;
+
 
 begin
-  rysuj_plansze();
-  while(true) do begin
-    rysuj_paletke();
-    steruj_paletka();
-  end;
 end.
 

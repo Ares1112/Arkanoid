@@ -13,6 +13,7 @@
       <Title Value="arkanoid"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
+      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -63,9 +64,15 @@
       <Filename Value="arkanoid"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir)"/>
+      <IncludeFiles Value="$(ProjOutDir);..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\headers"/>
+      <OtherUnitFiles Value="..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\headers;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\extra;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\src;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\jpeg\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\msvcrt\x86_64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\ogg\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\zlib\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\theora\x86_64-win64;..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\lib\zip\x86_64-win64"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
     <Other>
       <CompilerMessages>
         <MsgFileName Value=""/>

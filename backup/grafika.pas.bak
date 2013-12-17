@@ -1,41 +1,36 @@
 unit grafika;
 interface
-procedure rysuj_plansze();
 procedure rysuj_paletke();
 
 implementation
+
+{$I zglCustomConfig.cfg}
+//{$R *.res}
+
 uses
-  wincrt, graph, math, sysutils, sterowanie;
+  wincrt,
+  math,
+  sysutils,
+  sterowanie,
+  zgl_main,
+  zgl_screen,
+  zgl_window,
+  zgl_timers,
+  zgl_keyboard,
+  zgl_fx,
+  zgl_render_2d,
+  zgl_primitives_2d,
+  zgl_math_2d,
+  zgl_utils;
 var
    roz_x,roz_y,dlugosc_paletki,pal_x,i : Integer;
-
-procedure rysuj_plansze();
-
-var
-   sterownik,tryb_graficzny : smallint;
-
-begin
-   sterownik:=detect;
-   tryb_graficzny:=m640x350;
-   InitGraph(sterownik,tryb_graficzny,'');
-   SetBkColor(white);
-   cleardevice;
-   roz_x := GetMaxX;
-   roz_y := GetMaxY;
-   pal_x := floor(roz_x/2);
-   dlugosc_paletki := floor(roz_x/18);
-end;
+   DirApp  : UTF8String;
+   DirHome : UTF8String;
 
 procedure rysuj_pilke(i : Integer);
 
   begin
-    FillEllipse(floor(roz_x/2)+i, floor(roz_y/2)+i, 20,20);
-    delay(1);
-    SetVisualPage(1);
-    SetActivePage(0);
-    SetFillStyle(0,255);
-    FillEllipse(floor(roz_x/2)+i-1, floor(roz_y/2)+i-1, 20,20);
-    SetFillStyle(1,255);
+    pr2d_Circle( 400+i, 300+i, 20, $000000, 155, 32, PR2D_FILL );
   end;
 
 procedure rysuj_paletke();
@@ -44,21 +39,58 @@ procedure rysuj_paletke();
     pal_x := pal_x + zmiana;
     Repeat
      Begin
-       SetVisualPage(0);
-       SetActivePage(1);
-       bar(pal_x-dlugosc_paletki,roz_y-30,pal_x+dlugosc_paletki, roz_y-20);
-       SetFillStyle(0,255);
-       if zmiana = 1 then
-         bar(pal_x-dlugosc_paletki-zmiana,roz_y-30,pal_x-dlugosc_paletki, roz_y-20)
-       else if zmiana = -1 then
-         bar(pal_x+dlugosc_paletki,roz_y-30,pal_x+dlugosc_paletki+zmiana, roz_y-20);
-       SetFillStyle(1,255);
-       zmiana := 0;
-       rysuj_pilke(i);
-       i := i+1;
+
      end;
   Until (keypressed);
   end;
 
-BEGIN
-END.
+procedure Init;
+begin
+
+end;
+
+procedure Draw;
+begin
+  pr2d_Rect( 0, 0, 800, 600, $FFFFFF, 255, PR2D_FILL );
+  rysuj_pilke(1);
+end;
+
+procedure Update( dt : Double );
+begin
+
+end;
+
+procedure Timer;
+begin
+  if key_Press( K_ESCAPE ) Then zgl_Exit();
+  if key_Press( K_UP ) Then rysuj_pilke(1);
+  key_ClearState();
+end;
+
+procedure Quit;
+begin
+
+end;
+
+Begin
+
+  {$IFNDEF USE_ZENGL_STATIC}
+    if not zglLoad( libZenGL ) Then exit;
+  {$ENDIF}
+
+  DirApp  := utf8_Copy( PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) ) );
+  DirHome := utf8_Copy( PAnsiChar( zgl_Get( DIRECTORY_HOME ) ) );
+
+  timer_Add( @Timer, 1000 );
+
+  zgl_Reg( SYS_LOAD, @Init );
+  zgl_Reg( SYS_DRAW, @Draw );
+  zgl_Reg( SYS_UPDATE, @Update );
+  zgl_Reg( SYS_EXIT, @Quit );
+
+  wnd_SetCaption( 'Arkanoid' );
+
+  scr_SetOptions( 800, 600, REFRESH_MAXIMUM, FALSE, FALSE );
+
+  zgl_Init();
+End.

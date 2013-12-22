@@ -1567,6 +1567,7 @@ object Form1: TForm1
     BorderSpacing.Top = 40
     BorderSpacing.Right = 50
     Caption = 'Ustawienia'
+    OnClick = UstawnieniaClick
     TabOrder = 2
   end
   object Statystyki: TButton

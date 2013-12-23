@@ -1,25 +1,27 @@
 =================================
 === ZenGL 0.3.12 (2013.08.12) ===
 =================================
-[00000016ms] Begin
-[00000016ms] Current mode: 1600 x 900
-[00000112ms] ChoosePixelFormat: zDepth = 24; stencil = 0
-[00000112ms] GL_VERSION: 1.1.0
-[00000112ms] GL_RENDERER: GDI Generic
-[00000880ms] WARNING: Cannot find 3D-accelerator! Application run in software-mode, it's very slow
-[00000880ms] GL_MAX_TEXTURE_SIZE: 1024
-[00000880ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: FALSE
-[00000880ms] GL_SGIS_GENERATE_MIPMAP: FALSE
-[00000880ms] GL_MAX_TEXTURE_UNITS_ARB: 0
-[00000880ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: FALSE
-[00000880ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0
-[00000880ms] GL_EXT_BLEND_FUNC_SEPARATE: FALSE
-[00000880ms] GL_EXT_FRAMEBUFFER_OBJECT: FALSE
-[00000880ms] WGL_PBUFFER: FALSE
-[00000880ms] Support WaitVSync: FALSE
-[00000880ms] Ogg: Initialized
-[00000880ms] Theora: Initialized
-[00024112ms] Average FPS: 79
-[00024112ms] Timers to free: 4
-[00024112ms] Textures to free: 1
-[00024112ms] End
+[00000000ms] Begin
+[00000000ms] Current mode: 1600 x 900
+[00000096ms] ChoosePixelFormat: zDepth = 24; stencil = 0
+[00000096ms] GL_VERSION: 1.1.0
+[00000096ms] GL_RENDERER: GDI Generic
+[00000848ms] WARNING: Cannot find 3D-accelerator! Application run in software-mode, it's very slow
+[00000848ms] GL_MAX_TEXTURE_SIZE: 1024
+[00000848ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: FALSE
+[00000848ms] GL_SGIS_GENERATE_MIPMAP: FALSE
+[00000848ms] GL_MAX_TEXTURE_UNITS_ARB: 0
+[00000848ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: FALSE
+[00000848ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0
+[00000848ms] GL_EXT_BLEND_FUNC_SEPARATE: FALSE
+[00000848ms] GL_EXT_FRAMEBUFFER_OBJECT: FALSE
+[00000848ms] WGL_PBUFFER: FALSE
+[00000848ms] Support WaitVSync: FALSE
+[00000848ms] Ogg: Initialized
+[00000848ms] Theora: Initialized
+[00000864ms] Texture loaded: "C:\Users\Arkadiusz\Desktop\arkanoid\grafika\font-page0.tga"
+[00171904ms] Average FPS: 82
+[00171904ms] Timers to free: 4
+[00171904ms] Fonts to free: 1
+[00171904ms] Textures to free: 2
+[00171904ms] End

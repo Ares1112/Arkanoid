@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="27">
+    <Units Count="28">
       <Unit0>
         <Filename Value="arkanoid.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -12,8 +12,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="42" Y="9"/>
-        <UsageCount Value="46"/>
+        <CursorPos X="70" Y="64"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -24,9 +24,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="93"/>
-        <CursorPos X="42" Y="108"/>
-        <UsageCount Value="46"/>
+        <TopLine Value="1"/>
+        <CursorPos X="36" Y="200"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -37,8 +37,8 @@
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="19" Y="7"/>
-        <UsageCount Value="46"/>
+        <CursorPos X="16" Y="18"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -48,7 +48,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="402"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit3>
       <Unit4>
         <Filename Value="grafika\allegro.pas"/>
@@ -56,11 +56,11 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="72" Y="10"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit4>
       <Unit5>
         <Filename Value="allegropas\allegropas.lpk"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
         <DefaultSyntaxHighlighter Value="XML"/>
       </Unit5>
       <Unit6>
@@ -69,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="10"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit6>
       <Unit7>
         <Filename Value="..\..\AppData\Local\Temp\Temp1_allegro.pas-4.4.4-bin-win.zip\allegro.pas\demo\game.pas"/>
@@ -77,7 +77,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="6"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fpmake.pp"/>
@@ -85,7 +85,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="3"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit8>
       <Unit9>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\graph\fpmake.pp"/>
@@ -93,7 +93,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="85"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit9>
       <Unit10>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alfixed.pas"/>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="178"/>
         <CursorPos X="3" Y="192"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit10>
       <Unit11>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alvga.pas"/>
@@ -109,54 +109,54 @@
         <WindowIndex Value="0"/>
         <TopLine Value="94"/>
         <CursorPos X="60" Y="108"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit11>
       <Unit12>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\al3d.pas"/>
         <UnitName Value="al3d"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit12>
       <Unit13>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\albase.pas"/>
         <UnitName Value="albase"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit13>
       <Unit14>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alblend.pas"/>
         <UnitName Value="alblend"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit14>
       <Unit15>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alclrcnv.inc"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit15>
       <Unit16>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alcpuid.inc"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit16>
       <Unit17>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\aldrv.pas"/>
         <UnitName Value="aldrv"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit17>
       <Unit18>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alfile.pas"/>
         <UnitName Value="alfile"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit18>
       <Unit19>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alflic.pas"/>
         <UnitName Value="alflic"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit19>
       <Unit20>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\algui.pas"/>
         <UnitName Value="algui"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit20>
       <Unit21>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alkeyid.inc"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit21>
       <Unit22>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\allegro.pas"/>
@@ -164,12 +164,12 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5293"/>
         <CursorPos X="3" Y="5335"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit22>
       <Unit23>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alvtable.pas"/>
         <UnitName Value="alvtable"/>
-        <UsageCount Value="19"/>
+        <UsageCount Value="18"/>
       </Unit23>
       <Unit24>
         <Filename Value="..\..\Downloads\allegro.pas"/>
@@ -177,7 +177,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit24>
       <Unit25>
         <Filename Value="..\..\..\ARKADI~1\AppData\Local\Temp\7zO67F9.tmp\ImagingImport.pas"/>
@@ -185,7 +185,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="57"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit25>
       <Unit26>
         <Filename Value="..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\src\zgl_sound.pas"/>
@@ -193,133 +193,141 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1389"/>
         <CursorPos X="30" Y="1403"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\fpc\2.6.2\source\rtl\objpas\math.pp"/>
+        <UnitName Value="math"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="286"/>
+        <CursorPos X="38" Y="326"/>
+        <UsageCount Value="9"/>
+      </Unit27>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="grafika.pas"/>
-        <Caret Line="51" Column="1" TopLine="24"/>
+        <Filename Value="arkanoid.lpr"/>
+        <Caret Line="28" Column="4" TopLine="3"/>
       </Position1>
       <Position2>
-        <Filename Value="grafika.pas"/>
-        <Caret Line="96" Column="1" TopLine="71"/>
+        <Filename Value="arkanoid.lpr"/>
+        <Caret Line="67" Column="19" TopLine="50"/>
       </Position2>
       <Position3>
-        <Filename Value="grafika.pas"/>
-        <Caret Line="82" Column="11" TopLine="68"/>
+        <Filename Value="arkanoid.lpr"/>
+        <Caret Line="65" Column="19" TopLine="50"/>
       </Position3>
       <Position4>
         <Filename Value="grafika.pas"/>
-        <Caret Line="48" Column="14" TopLine="29"/>
+        <Caret Line="17" Column="14" TopLine="13"/>
       </Position4>
       <Position5>
         <Filename Value="grafika.pas"/>
-        <Caret Line="24" Column="25" TopLine="21"/>
+        <Caret Line="134" Column="72" TopLine="120"/>
       </Position5>
       <Position6>
         <Filename Value="grafika.pas"/>
-        <Caret Line="3" Column="11" TopLine="1"/>
+        <Caret Line="33" Column="31" TopLine="50"/>
       </Position6>
       <Position7>
         <Filename Value="grafika.pas"/>
-        <Caret Line="54" Column="17" TopLine="32"/>
+        <Caret Line="138" Column="22" TopLine="124"/>
       </Position7>
       <Position8>
         <Filename Value="grafika.pas"/>
-        <Caret Line="128" Column="67" TopLine="104"/>
+        <Caret Line="171" Column="1" TopLine="144"/>
       </Position8>
       <Position9>
         <Filename Value="grafika.pas"/>
-        <Caret Line="56" Column="10" TopLine="42"/>
+        <Caret Line="32" Column="19" TopLine="18"/>
       </Position9>
       <Position10>
         <Filename Value="grafika.pas"/>
-        <Caret Line="35" Column="55" TopLine="21"/>
+        <Caret Line="115" Column="28" TopLine="101"/>
       </Position10>
       <Position11>
         <Filename Value="grafika.pas"/>
-        <Caret Line="84" Column="13" TopLine="70"/>
+        <Caret Line="110" Column="93" TopLine="103"/>
       </Position11>
       <Position12>
         <Filename Value="grafika.pas"/>
-        <Caret Line="31" Column="13" TopLine="7"/>
+        <Caret Line="109" Column="13" TopLine="96"/>
       </Position12>
       <Position13>
         <Filename Value="grafika.pas"/>
-        <Caret Line="91" Column="23" TopLine="77"/>
+        <Caret Line="35" Column="27" TopLine="11"/>
       </Position13>
       <Position14>
         <Filename Value="grafika.pas"/>
-        <Caret Line="43" Column="41" TopLine="26"/>
+        <Caret Line="21" Column="14" TopLine="9"/>
       </Position14>
       <Position15>
         <Filename Value="grafika.pas"/>
-        <Caret Line="96" Column="22" TopLine="80"/>
+        <Caret Line="68" Column="28" TopLine="54"/>
       </Position15>
       <Position16>
         <Filename Value="grafika.pas"/>
-        <Caret Line="48" Column="11" TopLine="34"/>
+        <Caret Line="20" Column="17" TopLine="10"/>
       </Position16>
       <Position17>
-        <Filename Value="sterowanie.pas"/>
-        <Caret Line="30" Column="33" TopLine="7"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="27" Column="13" TopLine="12"/>
       </Position17>
       <Position18>
-        <Filename Value="sterowanie.pas"/>
-        <Caret Line="10" Column="11" TopLine="2"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="23" Column="12" TopLine="14"/>
       </Position18>
       <Position19>
-        <Filename Value="sterowanie.pas"/>
-        <Caret Line="31" Column="36" TopLine="8"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="27" Column="14" TopLine="13"/>
       </Position19>
       <Position20>
         <Filename Value="grafika.pas"/>
-        <Caret Line="4" Column="19" TopLine="1"/>
+        <Caret Line="71" Column="21" TopLine="58"/>
       </Position20>
       <Position21>
-        <Filename Value="sterowanie.pas"/>
-        <Caret Line="32" Column="47" TopLine="10"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="72" Column="28" TopLine="58"/>
       </Position21>
       <Position22>
         <Filename Value="grafika.pas"/>
-        <Caret Line="103" Column="30" TopLine="92"/>
+        <Caret Line="48" Column="12" TopLine="21"/>
       </Position22>
       <Position23>
         <Filename Value="grafika.pas"/>
-        <Caret Line="53" Column="48" TopLine="39"/>
+        <Caret Line="43" Column="24" TopLine="34"/>
       </Position23>
       <Position24>
         <Filename Value="grafika.pas"/>
-        <Caret Line="6" Column="45" TopLine="1"/>
+        <Caret Line="74" Column="30" TopLine="63"/>
       </Position24>
       <Position25>
         <Filename Value="grafika.pas"/>
-        <Caret Line="96" Column="31" TopLine="82"/>
+        <Caret Line="72" Column="28" TopLine="58"/>
       </Position25>
       <Position26>
         <Filename Value="grafika.pas"/>
-        <Caret Line="48" Column="38" TopLine="34"/>
+        <Caret Line="141" Column="61" TopLine="123"/>
       </Position26>
       <Position27>
         <Filename Value="grafika.pas"/>
-        <Caret Line="42" Column="40" TopLine="34"/>
+        <Caret Line="144" Column="46" TopLine="127"/>
       </Position27>
       <Position28>
         <Filename Value="grafika.pas"/>
-        <Caret Line="50" Column="40" TopLine="28"/>
+        <Caret Line="80" Column="52" TopLine="66"/>
       </Position28>
       <Position29>
         <Filename Value="grafika.pas"/>
-        <Caret Line="43" Column="11" TopLine="29"/>
+        <Caret Line="78" Column="14" TopLine="71"/>
       </Position29>
       <Position30>
         <Filename Value="grafika.pas"/>
-        <Caret Line="109" Column="19" TopLine="97"/>
+        <Caret Line="147" Column="55" TopLine="133"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

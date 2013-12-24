@@ -35,7 +35,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="3">
       <Unit0>
         <Filename Value="menu.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -56,13 +56,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="statystyki"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="ustawienia.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Ustawie"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Ustawienia"/>
-      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

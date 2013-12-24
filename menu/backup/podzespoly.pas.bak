@@ -34,7 +34,7 @@ var
   Plik: TextFile;
   Linia: String;
   Wartownik : shortint = 1;
-  camMain : zglTCamera2D;
+
 
 implementation
 

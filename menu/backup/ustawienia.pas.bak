@@ -5,13 +5,15 @@ unit Ustawienia;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, LclIntf;
 
 type
 
   { TUstawie }
 
   TUstawie = class(TForm)
+    pilka: TButton;
+    ColorDialog1: TColorDialog;
     Zapisz: TButton;
     Anuluj: TButton;
     Fullscreen: TCheckBox;
@@ -21,8 +23,9 @@ type
     szerokosc: TLabel;
     wysokoscedit: TEdit;
     procedure AnulujClick(Sender: TObject);
+    procedure ColorDialog1Close(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Label1Click(Sender: TObject);
+    procedure pilkaClick(Sender: TObject);
     procedure ZapiszClick(Sender: TObject);
   private
     { private declarations }
@@ -35,6 +38,9 @@ var
   Wartownik : shortint = 1;
   Plik: TextFile;
   Linia: String;
+  kolor : String;
+  kolor_menu : Integer;
+  R,G,B : Integer;
 
 implementation
 
@@ -64,20 +70,35 @@ begin
     else if Wartownik = 2 then
       wysokoscedit.Text := Linia
     else if Wartownik = 3 then
-      Fullscreen.Checked := IntToBool(StrToInt(Linia));
+      Fullscreen.Checked := IntToBool(StrToInt(Linia))
+    else if Wartownik = 5 then
+      ColorDialog1.Color := StrToInt(Linia);
     Inc(Wartownik);
   Until (Eof(Plik));
   CloseFile(Plik);
 end;
+
 
 procedure TUstawie.AnulujClick(Sender: TObject);
 begin
   Ustawie.Close;
 end;
 
-procedure TUstawie.Label1Click(Sender: TObject);
+procedure TUstawie.ColorDialog1Close(Sender: TObject);
 begin
+  begin
+    R := GetRValue(ColorDialog1.Color);
+    G := GetGValue(ColorDialog1.Color);
+    B := GetBValue(ColorDialog1.Color);
+    kolor:='$'+IntToHex(R,2)+IntToHex(G,2)+IntToHex(B,2);
+    kolor_menu := ColorDialog1.Color;
+    ShowMessage(kolor);
+end;
+end;
 
+procedure TUstawie.pilkaClick(Sender: TObject);
+begin
+  ColorDialog1.Execute;
 end;
 
 procedure TUstawie.ZapiszClick(Sender: TObject);
@@ -97,9 +118,13 @@ begin
       if Fullscreen.Checked = True then
         Writeln(Plik, '1')
       else Writeln(Plik, '0');
-    end;
+    end
+    else if Wartownik = 4 then
+      Writeln(Plik, kolor)
+    else if Wartownik = 5 then
+      Writeln(Plik, kolor_menu);
     Inc(Wartownik);
-  Until Wartownik = 3;
+  Until Wartownik = 6;
   CloseFile(Plik);
   Ustawie.Close;
 end;

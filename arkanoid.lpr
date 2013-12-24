@@ -50,7 +50,9 @@ AssignFile(Plik,DirApp+'pliki\ustawienia.txt');
       else if Wartownik = 2 then
         wysokosc := StrToInt(Linia)
       else if Wartownik = 3 then
-        fullscreen := IntToBool(StrToInt(Linia));
+        fullscreen := IntToBool(StrToInt(Linia))
+      else if Wartownik = 4 then
+        kolor_pilki := Linia;
     Inc(Wartownik);
   Until (Eof(Plik));
   CloseFile(Plik);

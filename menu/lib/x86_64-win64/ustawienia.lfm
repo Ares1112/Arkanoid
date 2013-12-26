@@ -420,6 +420,30 @@ object Ustawie: TUstawie
     OnClick = pilkaClick
     TabOrder = 5
   end
+  object paletka: TButton
+    Left = 488
+    Height = 33
+    Top = 112
+    Width = 169
+    Caption = 'Wybierz kolor paletki'
+    OnClick = paletkaClick
+    TabOrder = 6
+  end
+  object pseudo: TEdit
+    Left = 159
+    Height = 23
+    Top = 233
+    Width = 123
+    TabOrder = 7
+  end
+  object Pseudonim: TLabel
+    Left = 80
+    Height = 16
+    Top = 240
+    Width = 61
+    Caption = 'Pseudonim'
+    ParentColor = False
+  end
   object ColorDialog1: TColorDialog
     OnClose = ColorDialog1Close
     Color = clBlack
@@ -447,5 +471,33 @@ object Ustawie: TUstawie
     )
     left = 568
     top = 8
+  end
+  object ColorDialog2: TColorDialog
+    OnClose = ColorDialog2Close
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 568
+    top = 80
   end
 end

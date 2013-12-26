@@ -12,6 +12,10 @@ type
   { TUstawie }
 
   TUstawie = class(TForm)
+    pseudo: TEdit;
+    Pseudonim: TLabel;
+    paletka: TButton;
+    ColorDialog2: TColorDialog;
     pilka: TButton;
     ColorDialog1: TColorDialog;
     Zapisz: TButton;
@@ -24,7 +28,9 @@ type
     wysokoscedit: TEdit;
     procedure AnulujClick(Sender: TObject);
     procedure ColorDialog1Close(Sender: TObject);
+    procedure ColorDialog2Close(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure paletkaClick(Sender: TObject);
     procedure pilkaClick(Sender: TObject);
     procedure ZapiszClick(Sender: TObject);
   private
@@ -40,6 +46,8 @@ var
   Linia: String;
   kolor : String;
   kolor_menu : Integer;
+  kolorp : String;
+  kolorp_menu : Integer;
   R,G,B : Integer;
 
 implementation
@@ -71,11 +79,28 @@ begin
       wysokoscedit.Text := Linia
     else if Wartownik = 3 then
       Fullscreen.Checked := IntToBool(StrToInt(Linia))
-    else if Wartownik = 5 then
+    else if Wartownik = 4 then
+      kolor := Linia
+    else if Wartownik = 5 then begin
       ColorDialog1.Color := StrToInt(Linia);
+      kolor_menu := StrToInt(Linia);
+      end
+    else if Wartownik = 6 then
+      kolorp := Linia
+    else if Wartownik = 7 then begin
+      ColorDialog2.Color := StrToInt(Linia);
+      kolorp_menu := StrToInt(Linia);
+    end
+    else if Wartownik = 8 then
+      pseudo.Text := Linia;
     Inc(Wartownik);
   Until (Eof(Plik));
   CloseFile(Plik);
+end;
+
+procedure TUstawie.paletkaClick(Sender: TObject);
+begin
+  ColorDialog2.Execute;
 end;
 
 
@@ -86,13 +111,20 @@ end;
 
 procedure TUstawie.ColorDialog1Close(Sender: TObject);
 begin
-  begin
-    R := GetRValue(ColorDialog1.Color);
-    G := GetGValue(ColorDialog1.Color);
-    B := GetBValue(ColorDialog1.Color);
-    kolor:='$'+IntToHex(R,2)+IntToHex(G,2)+IntToHex(B,2);
-    kolor_menu := ColorDialog1.Color;
+  R := GetRValue(ColorDialog1.Color);
+  G := GetGValue(ColorDialog1.Color);
+  B := GetBValue(ColorDialog1.Color);
+  kolor:='$'+IntToHex(R,2)+IntToHex(G,2)+IntToHex(B,2);
+  kolor_menu := ColorDialog1.Color;
 end;
+
+procedure TUstawie.ColorDialog2Close(Sender: TObject);
+begin
+  R := GetRValue(ColorDialog2.Color);
+  G := GetGValue(ColorDialog2.Color);
+  B := GetBValue(ColorDialog2.Color);
+  kolorp:='$'+IntToHex(R,2)+IntToHex(G,2)+IntToHex(B,2);
+  kolorp_menu := ColorDialog2.Color;
 end;
 
 procedure TUstawie.pilkaClick(Sender: TObject);
@@ -121,9 +153,15 @@ begin
     else if Wartownik = 4 then
       Writeln(Plik, kolor)
     else if Wartownik = 5 then
-      Writeln(Plik, kolor_menu);
+      Writeln(Plik, kolor_menu)
+    else if Wartownik = 6 then
+      Writeln(Plik, kolorp)
+    else if Wartownik = 7 then
+      Writeln(Plik, kolorp_menu)
+    else if Wartownik = 8 then
+      Writeln(Plik, pseudo.Text);
     Inc(Wartownik);
-  Until Wartownik = 6;
+  Until Wartownik = 9;
   CloseFile(Plik);
   Ustawie.Close;
 end;

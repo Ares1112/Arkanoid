@@ -61,8 +61,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="85"/>
-        <CursorPos X="57" Y="95"/>
+        <TopLine Value="40"/>
+        <CursorPos X="11" Y="76"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -71,7 +71,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="ustawienia.pas"/>
         <Caret Line="94" Column="33" TopLine="78"/>
@@ -182,16 +182,12 @@
       </Position27>
       <Position28>
         <Filename Value="ustawienia.pas"/>
-        <Caret Line="42" Column="19" TopLine="53"/>
+        <Caret Line="89" Column="17" TopLine="75"/>
       </Position28>
       <Position29>
         <Filename Value="ustawienia.pas"/>
-        <Caret Line="89" Column="17" TopLine="75"/>
-      </Position29>
-      <Position30>
-        <Filename Value="ustawienia.pas"/>
         <Caret Line="91" Column="32" TopLine="76"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

@@ -5,7 +5,7 @@ procedure steruj_paletka();
 var
   zmiana : Integer;
   rusz : shortint;
-  szybkosc_paletki : Integer = 4;
+  szybkosc_paletki : Integer = 5;
 implementation
 
 uses

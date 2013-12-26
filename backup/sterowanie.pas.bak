@@ -5,6 +5,7 @@ procedure steruj_paletka();
 var
   zmiana : Integer;
   rusz : shortint;
+  szybkosc_paletki : Integer = 4;
 implementation
 
 uses
@@ -26,8 +27,8 @@ uses
 
 procedure steruj_paletka();
 begin
-  if (key_Press(K_RIGHT)) and (pal_x < szerokosc-dlugosc_paletki) then pal_x := pal_x + 4
-  else if (key_Press(K_LEFT)) and (pal_x >= 0) then pal_x := pal_x - 4;
+  if (key_Press(K_RIGHT)) and (pal_x < szerokosc-dlugosc_paletki) then pal_x := pal_x + szybkosc_paletki
+  else if (key_Press(K_LEFT)) and (pal_x >= 0) then pal_x := pal_x - szybkosc_paletki;
   if key_Press( K_SPACE) then rusz := 1;
   if key_Press( K_ESCAPE ) Then zgl_Exit();
   key_ClearState();

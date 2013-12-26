@@ -6,7 +6,10 @@ var
   pal_x: integer;
   szerokosc, wysokosc: integer;
   dlugosc_paletki: integer;
-  kolor_pilki: String;
+  kolor_pilki: string;
+  kolor_paletki: string;
+  pseudonim: string;
+  rekord: integer;
 
 implementation
 
@@ -41,18 +44,6 @@ uses
   zgl_math_2d,
   zgl_utils;
 
-var
-  ruch_x, ruch_y: double;
-  wektor_x, wektor_y: double;
-  ilosc_zyc: shortint;
-  bonus: shortint;
-  bonusy: array [1..50, 1..4] of integer;
-  wynik: integer;
-  szybkosc_pilki: integer = 13;
-  memory: zglTMemory;
-  texSerce: zglPTexture;
-  fntMain: zglPFont;
-
 type
   kafelek = record
     pozycja_x: integer;
@@ -61,7 +52,118 @@ type
   end;
 
 var
-  kafelki: array [1..50] of kafelek;
+  ruch_x, ruch_y: double;
+  wektor_x, wektor_y: double;
+  ilosc_zyc: shortint;
+  bonus: integer; //ktory to bonus z kolei
+  bonusy: array [1..50, 1..4] of integer; //zawiera bonusy ktore sie pojawily
+  wynik: integer;
+  szybkosc_pilki: integer = 15;
+  koniec_gry: integer = 47; //ilosc pozostalych kafelkow
+  memory: zglTMemory;
+  texSerce: zglPTexture;
+  fntMain: zglPFont;
+  kafelki: array [1..50] of kafelek; //ma w sobie wszystkie kafelki
+  czesc : Array [1..1, 1..2] OF String; //uzywane w procedurze podziel_rekord
+  tablica_wynikow : ARRAY [1..50, 1..2] of String;//uzywane w sortuj_wyniki
+  zabezpieczenie : shortint = 1; //aby nie wywolywalo drugi raz sortuj_wyniki
+
+procedure podziel_rekord(s: ansistring);
+var
+  ss: ansistring;
+  i: integer;
+  wart: integer = 0;
+
+begin
+  ss := '';
+  s := s + ' '; //wartownik
+  for i := 1 to length(s) do
+    if (s[i] in ['0'..'9', '_', '-', 'A'..'Z', 'a'..'z']) then
+      ss := ss + s[i]
+    else if ss <> '' then
+    begin
+      if wart = 0 then
+        czesc[1][1] := ss
+      else if wart = 1 then
+        czesc[1][2] := ss;
+      inc(wart);
+      ss := '';
+    end;
+end;
+
+procedure zapisz_wyniki(nowy : ansistring; zakres : Integer);
+var
+  Wartownik : Integer;
+  Linia : String;
+  Plik : TextFile;
+  i,j : Integer;
+  zabez : shortint = 1;
+  //zamien : array [1..50, 1..2] of String;
+begin
+  podziel_rekord(nowy);
+  Wartownik := 1;
+  AssignFile(Plik,PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) )+'pliki\statystyki.txt');
+  {$I-};
+  Append(Plik);
+  {$I+};
+  Reset(Plik);
+  Repeat
+    if Wartownik = 1 then
+      begin
+        Readln(Plik,Linia);
+        Rewrite(Plik);
+        Writeln(Plik, StrToInt(Linia) + 1);
+        Inc(Wartownik);
+      end
+    else if Wartownik > 1 then begin
+
+      if (StrToInt(czesc[1][1]) > StrToInt(tablica_wynikow[Wartownik][1])) and (zabez <> 0) then begin
+        Writeln(Plik,czesc[1][1]+' '+czesc[1][2]);
+        zabez := 0;
+      end
+      else begin
+        Writeln(Plik, tablica_wynikow[Wartownik][1] +' '+ tablica_wynikow[Wartownik][2]);
+        Inc(Wartownik);
+      end;
+    end;
+  Until Wartownik = 12;
+  CloseFile(Plik);
+end;
+
+procedure sortuj_wyniki(nowy : ansistring);
+  VAR
+  Plik: TextFile;
+  Linia: ansistring;
+  Wartownik : shortint = 1;
+  i,j : Integer;
+  trick : integer;
+  //zamien : array [1..50, 1..2] of ansistring;
+
+begin
+AssignFile(Plik, PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) )+'pliki\statystyki.txt');
+  {$I-};
+  Append(Plik);
+  {$I+};
+  If IOResult <> 0 Then Rewrite(Plik);
+  Reset(Plik);
+  Repeat
+    Readln(Plik,Linia);
+      if Wartownik > 1 then begin
+        podziel_rekord(Linia);
+        tablica_wynikow[wartownik][1] := czesc[1][1];
+        tablica_wynikow[wartownik][2] := czesc[1][2];
+      end;
+    Inc(Wartownik);
+  Until (Eof(Plik));
+  CloseFile(Plik);{ stwierdzam, ze nie dziala bo pascal
+  for j := 2 to wartownik-2 do begin
+    for i := 2 to wartownik-2 do begin
+      if StrToInt(tablica_wynikow[i][1]) > StrToInt(tablica_wynikow[i+1][1]) then
+        tablica_wynikow[i+20] := tablica_wynikow[i]; tablica_wynikow[i] := tablica_wynikow[i+1]; tablica_wynikow[i+1] := tablica_wynikow[i+20];
+    end;
+  end;}
+  zapisz_wyniki(nowy,wartownik);
+end;
 
 procedure wczytaj_kafelki();
 var
@@ -131,7 +233,7 @@ end;
 procedure rysuj_paletke(x: integer);
 begin
   pr2d_Rect(x, wysokosc - Ceil(wysokosc / 20), dlugosc_paletki, 15,
-    $000000, 255, PR2D_FILL);
+    StrToInt64(kolor_paletki), 255, PR2D_FILL);
 end;
 
 procedure rysuj_kafelek(x: integer; y: integer; kolor: longword);
@@ -189,48 +291,59 @@ begin
   end;
 end;
 
-procedure sprawdz_odbicie_paletki(i: integer);
+procedure sprawdz_odbicie_kafelka(i: integer);
 begin
   //sprawdzenie odbicia w kafelek od lewej
-  if (ruch_x <= kafelki[i].pozycja_x - 1) and (ruch_x >= kafelki[i].pozycja_x) and
-    (ruch_y >= kafelki[i].pozycja_y) and (ruch_y <= kafelki[i].pozycja_y +
-    Ceil(wysokosc / 28)) then
+  if (ruch_x <= kafelki[i].pozycja_x + 1) and (ruch_x >= kafelki[i].pozycja_x - 5) and
+    (ruch_y >= kafelki[i].pozycja_y - 9) and (ruch_y <= kafelki[i].pozycja_y +
+    Ceil(wysokosc / 28) + 9) then
   begin
     wektor_x := wektor_x * (-1);
     kafelki[i].pozycja_x := 20000;
     wynik := wynik + 100;
     losuj_bonus(Ceil(ruch_x), Ceil(ruch_y));
+    Dec(koniec_gry);
   end
   //sprawdzenie odbicia w kafelek od prawej
-  else if (ruch_x <= kafelki[i].pozycja_x + Ceil(szerokosc / 15)) and
+  else if (ruch_x <= kafelki[i].pozycja_x + Ceil(szerokosc / 15) + 5) and
     (ruch_x >= kafelki[i].pozycja_x + Ceil(szerokosc / 15) - 1) and
-    (ruch_y >= kafelki[i].pozycja_y) and (ruch_y <= kafelki[i].pozycja_y +
-    Ceil(wysokosc / 28)) then
+    (ruch_y >= kafelki[i].pozycja_y - 9) and (ruch_y <= kafelki[i].pozycja_y +
+    Ceil(wysokosc / 28) + 9) then
   begin
     wektor_x := wektor_x * (-1);
     kafelki[i].pozycja_x := 20000;
     wynik := wynik + 100;
     losuj_bonus(Ceil(ruch_x), Ceil(ruch_y));
+    Dec(koniec_gry);
   end
-  //sprawdzenie udrzenia w kafelek od dolu
-  else if (ruch_x <= kafelki[i].pozycja_x + Ceil(szerokosc / 15)) and
-    (ruch_x >= kafelki[i].pozycja_x) and (ruch_y <= kafelki[i].pozycja_y +
-    Ceil(wysokosc / 28) + 5) and (ruch_y >= kafelki[i].pozycja_y) then
+  //sprawdzenie udrzenia w kafelek od dolu i gory
+  else if (ruch_x <= kafelki[i].pozycja_x + Ceil(szerokosc / 15) + 1) and
+    (ruch_x >= kafelki[i].pozycja_x - 1) and (ruch_y <= kafelki[i].pozycja_y +
+    Ceil(wysokosc / 28) + 8) and (ruch_y >= kafelki[i].pozycja_y - 8) then
   begin
     wektor_y := wektor_y * (-1);
     kafelki[i].pozycja_x := 20000;
     wynik := wynik + 100;
     losuj_bonus(Ceil(ruch_x), Ceil(ruch_y));
-  end
-  //sprawdzenie odbicia w kafelek od gory
-  else if (ruch_x <= kafelki[i].pozycja_x + Ceil(szerokosc / 15)) and
-    (ruch_x >= kafelki[i].pozycja_x) and (ruch_y <= kafelki[i].pozycja_y) and
-    (ruch_y >= kafelki[i].pozycja_y - 1) then
+    Dec(koniec_gry);
+  end;
+end;
+
+procedure sprawdz_odbicie_paletki();
+begin
+  //udzerzenie pilki od paletki(lewa polowa)
+  if (ruch_x <= pal_x + (dlugosc_paletki / 2)) and (ruch_x >= pal_x) and
+    (ruch_y >= wysokosc - Ceil(wysokosc / 20) - 5) then
   begin
-    wektor_y := wektor_y * (-1);
-    kafelki[i].pozycja_x := 20000;
-    wynik := wynik + 100;
-    losuj_bonus(Ceil(ruch_x), Ceil(ruch_y));
+    wektor_y := -1.5 + ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
+    wektor_x := -((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
+  end//prawa polowa
+  else if (ruch_x <= pal_x + (dlugosc_paletki)) and
+    (ruch_x > pal_x + (dlugosc_paletki / 2)) and (ruch_y >= wysokosc -
+    Ceil(wysokosc / 20) - 5) then
+  begin
+    wektor_y := -1 * ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki) - 0.5;
+    wektor_x := 1 + -1 * ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
   end;
 end;
 
@@ -260,6 +373,7 @@ begin
   memory.Size := memStream.Size;
   texSerce := tex_LoadFromMemory(memory, 'PNG');
   memStream.Free();
+
 end;
 
 procedure Draw;
@@ -267,7 +381,7 @@ var
   i: integer;
 begin
   pr2d_Rect(0, 0, szerokosc, wysokosc, $FFFFFF, 255, PR2D_FILL);
-  if ilosc_zyc >= 1 then
+  if (ilosc_zyc >= 1) and (koniec_gry > 0) then
   begin
     rysuj_pilke(ruch_x, ruch_y);
     rysuj_paletke(pal_x);
@@ -280,17 +394,18 @@ begin
     if bonus > 0 then
     begin
       for i := 1 to bonus do
-      begin
         rysuj_bonus(bonusy[i][1], bonusy[i][2], bonusy[i][3]);
-
-      end;
     end;
   end
   else
-  begin
+  begin //co jak koniec gry
     text_DrawEx(fntMain, Ceil(szerokosc / 5), Ceil(wysokosc / 2), 2,
       1, 'Koniec gry, wynik: ' + IntToStr(wynik) + '  Nacisnij ESC aby wyjsc',
       255, $000000, 0);
+    if zabezpieczenie <> 0 then begin
+      sortuj_wyniki(IntToStr(wynik) + ' ' + pseudonim);
+      zabezpieczenie := 0;
+    end;
   end;
 end;
 
@@ -311,6 +426,7 @@ procedure Timer_pilka;
 var
   i: integer;
 begin
+  //odbijanie od krancow mapy
   if (ruch_x >= szerokosc - 15) or (ruch_x <= 15) then
     wektor_x := wektor_x * (-1);
   if (ruch_y <= 15) then
@@ -324,22 +440,9 @@ begin
   end;
   for i := 1 to 48 do
   begin
-    sprawdz_odbicie_paletki(i);
+    sprawdz_odbicie_kafelka(i);
   end;
-  //udzerzenie pilki od paletki(lewa polowa)
-  if (ruch_x <= pal_x + (dlugosc_paletki / 2)) and (ruch_x >= pal_x) and
-    (ruch_y >= wysokosc - Ceil(wysokosc / 20) - 5) then
-  begin
-    wektor_y := -1.5 + ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
-    wektor_x := -((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
-  end//prawa polowa
-  else if (ruch_x <= pal_x + (dlugosc_paletki)) and
-    (ruch_x > pal_x + (dlugosc_paletki / 2)) and (ruch_y >= wysokosc -
-    Ceil(wysokosc / 20) - 5) then
-  begin
-    wektor_y := -1 * ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki) - 0.5;
-    wektor_x := 1 + -1 * ((pal_x + dlugosc_paletki - ruch_x) / dlugosc_paletki);
-  end;
+  sprawdz_odbicie_paletki();
   //gdy pilka w ruchu
   if rusz = 1 then
   begin
@@ -360,7 +463,7 @@ begin
   steruj_paletka();
 end;
 
-procedure Timer_bonus_skoncz;
+procedure Timer_bonus_skoncz; //odlicza 10 sekund do zniszczenia bonusu
 var
   i: integer;
 begin

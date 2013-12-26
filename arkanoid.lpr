@@ -18,6 +18,7 @@ uses
   zgl_text,
   zgl_math_2d,
   zgl_utils;
+
 var
    DirApp  : UTF8String;
    DirHome : UTF8String;
@@ -52,7 +53,11 @@ AssignFile(Plik,DirApp+'pliki\ustawienia.txt');
       else if Wartownik = 3 then
         fullscreen := IntToBool(StrToInt(Linia))
       else if Wartownik = 4 then
-        kolor_pilki := Linia;
+        kolor_pilki := Linia
+      else if Wartownik = 6 then
+        kolor_paletki := Linia
+      else if Wartownik = 8 then
+        pseudonim := Linia;
     Inc(Wartownik);
   Until (Eof(Plik));
   CloseFile(Plik);
@@ -66,8 +71,8 @@ begin
   DirApp  := utf8_Copy( PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) ) );
   DirHome := utf8_Copy( PAnsiChar( zgl_Get( DIRECTORY_HOME ) ) );
 
-  wnd_SetCaption('Arkanoid');
   odczyt_ustawien();
+  wnd_SetCaption('Arkanoid');
   scr_SetOptions( szerokosc, wysokosc, REFRESH_MAXIMUM, fullscreen, FALSE );
 
   zgl_Init();

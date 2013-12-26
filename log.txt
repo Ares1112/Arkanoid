@@ -6,22 +6,22 @@
 [00000096ms] ChoosePixelFormat: zDepth = 24; stencil = 0
 [00000096ms] GL_VERSION: 1.1.0
 [00000096ms] GL_RENDERER: GDI Generic
-[00000960ms] WARNING: Cannot find 3D-accelerator! Application run in software-mode, it's very slow
-[00000960ms] GL_MAX_TEXTURE_SIZE: 1024
-[00000960ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: FALSE
-[00000960ms] GL_SGIS_GENERATE_MIPMAP: FALSE
-[00000960ms] GL_MAX_TEXTURE_UNITS_ARB: 0
-[00000960ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: FALSE
-[00000960ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0
-[00000960ms] GL_EXT_BLEND_FUNC_SEPARATE: FALSE
-[00000960ms] GL_EXT_FRAMEBUFFER_OBJECT: FALSE
-[00000960ms] WGL_PBUFFER: FALSE
-[00000960ms] Support WaitVSync: FALSE
-[00000960ms] Ogg: Initialized
-[00000960ms] Theora: Initialized
-[00000992ms] Texture loaded: "C:\Users\Arkadiusz\Desktop\arkanoid\grafika\font-page0.tga"
-[00002112ms] Average FPS: 75
-[00002112ms] Timers to free: 5
-[00002112ms] Fonts to free: 1
-[00002112ms] Textures to free: 2
-[00002112ms] End
+[00000544ms] WARNING: Cannot find 3D-accelerator! Application run in software-mode, it's very slow
+[00000544ms] GL_MAX_TEXTURE_SIZE: 1024
+[00000544ms] GL_EXT_TEXTURE_COMPRESSION_S3TC: FALSE
+[00000544ms] GL_SGIS_GENERATE_MIPMAP: FALSE
+[00000544ms] GL_MAX_TEXTURE_UNITS_ARB: 0
+[00000544ms] GL_EXT_TEXTURE_FILTER_ANISOTROPIC: FALSE
+[00000544ms] GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 0
+[00000544ms] GL_EXT_BLEND_FUNC_SEPARATE: FALSE
+[00000544ms] GL_EXT_FRAMEBUFFER_OBJECT: FALSE
+[00000544ms] WGL_PBUFFER: FALSE
+[00000544ms] Support WaitVSync: FALSE
+[00000544ms] Ogg: Initialized
+[00000544ms] Theora: Initialized
+[00000544ms] Texture loaded: "C:\Users\Arkadiusz\Desktop\arkanoid\grafika\font-page0.tga"
+[00607360ms] Average FPS: 83
+[00607360ms] Timers to free: 5
+[00607360ms] Fonts to free: 1
+[00607360ms] Textures to free: 2
+[00607360ms] End

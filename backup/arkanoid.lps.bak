@@ -11,9 +11,9 @@
         <UnitName Value="arkanoid"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="44"/>
-        <CursorPos X="1" Y="65"/>
-        <UsageCount Value="74"/>
+        <TopLine Value="13"/>
+        <CursorPos X="11" Y="42"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -21,11 +21,12 @@
         <Filename Value="grafika.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="grafika"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="57"/>
-        <CursorPos X="31" Y="61"/>
-        <UsageCount Value="74"/>
+        <TopLine Value="461"/>
+        <CursorPos X="46" Y="470"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -33,12 +34,11 @@
         <Filename Value="sterowanie.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="sterowanie"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="33" Y="8"/>
-        <UsageCount Value="74"/>
+        <TopLine Value="14"/>
+        <CursorPos X="47" Y="32"/>
+        <UsageCount Value="80"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -48,7 +48,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="402"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit3>
       <Unit4>
         <Filename Value="grafika\allegro.pas"/>
@@ -56,11 +56,11 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="72" Y="10"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit4>
       <Unit5>
         <Filename Value="allegropas\allegropas.lpk"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
         <DefaultSyntaxHighlighter Value="XML"/>
       </Unit5>
       <Unit6>
@@ -69,7 +69,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="3" Y="10"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit6>
       <Unit7>
         <Filename Value="..\..\AppData\Local\Temp\Temp1_allegro.pas-4.4.4-bin-win.zip\allegro.pas\demo\game.pas"/>
@@ -77,7 +77,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="6"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit7>
       <Unit8>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\fpmake.pp"/>
@@ -85,7 +85,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="3"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit8>
       <Unit9>
         <Filename Value="C:\lazarus\fpc\2.6.2\source\packages\graph\fpmake.pp"/>
@@ -93,7 +93,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="85"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit9>
       <Unit10>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alfixed.pas"/>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="178"/>
         <CursorPos X="3" Y="192"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit10>
       <Unit11>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alvga.pas"/>
@@ -109,54 +109,54 @@
         <WindowIndex Value="0"/>
         <TopLine Value="94"/>
         <CursorPos X="60" Y="108"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit11>
       <Unit12>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\al3d.pas"/>
         <UnitName Value="al3d"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit12>
       <Unit13>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\albase.pas"/>
         <UnitName Value="albase"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit13>
       <Unit14>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alblend.pas"/>
         <UnitName Value="alblend"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit14>
       <Unit15>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alclrcnv.inc"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit15>
       <Unit16>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alcpuid.inc"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit16>
       <Unit17>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\aldrv.pas"/>
         <UnitName Value="aldrv"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit17>
       <Unit18>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alfile.pas"/>
         <UnitName Value="alfile"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit18>
       <Unit19>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alflic.pas"/>
         <UnitName Value="alflic"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit19>
       <Unit20>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\algui.pas"/>
         <UnitName Value="algui"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit20>
       <Unit21>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alkeyid.inc"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit21>
       <Unit22>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\allegro.pas"/>
@@ -164,12 +164,12 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5293"/>
         <CursorPos X="3" Y="5335"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit22>
       <Unit23>
         <Filename Value="..\..\Downloads\allegro.pas-4.4.4-bin-win\allegro.pas\lib\alvtable.pas"/>
         <UnitName Value="alvtable"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="15"/>
       </Unit23>
       <Unit24>
         <Filename Value="..\..\Downloads\allegro.pas"/>
@@ -177,7 +177,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit24>
       <Unit25>
         <Filename Value="..\..\..\ARKADI~1\AppData\Local\Temp\7zO67F9.tmp\ImagingImport.pas"/>
@@ -185,7 +185,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="57"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit25>
       <Unit26>
         <Filename Value="..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\src\zgl_sound.pas"/>
@@ -193,7 +193,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1389"/>
         <CursorPos X="30" Y="1403"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit26>
       <Unit27>
@@ -202,7 +202,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="286"/>
         <CursorPos X="38" Y="326"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit27>
       <Unit28>
         <Filename Value="..\..\Downloads\zengl-src-0.3.12\zengl-src-0.3.12\src\zgl_utils.pas"/>
@@ -210,7 +210,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="503"/>
         <CursorPos X="5" Y="518"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
@@ -219,7 +219,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="10" Y="14"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit29>
       <Unit30>
@@ -228,7 +228,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1860"/>
         <CursorPos X="15" Y="1867"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit30>
       <Unit31>
@@ -237,7 +237,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="449"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit31>
     </Units>
@@ -247,123 +247,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="118" Column="29" TopLine="105"/>
+        <Caret Line="118" Column="176" TopLine="105"/>
       </Position1>
       <Position2>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="119" Column="38" TopLine="105"/>
+        <Caret Line="117" Column="39" TopLine="104"/>
       </Position2>
       <Position3>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="118" Column="32" TopLine="105"/>
+        <Caret Line="152" Column="31" TopLine="136"/>
       </Position3>
       <Position4>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="96" Column="30" TopLine="84"/>
+        <Caret Line="156" Column="10" TopLine="139"/>
       </Position4>
       <Position5>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="118" Column="29" TopLine="104"/>
+        <Caret Line="153" Column="235" TopLine="140"/>
       </Position5>
       <Position6>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="96" Column="18" TopLine="74"/>
+        <Caret Line="152" Column="34" TopLine="139"/>
       </Position6>
       <Position7>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="118" Column="29" TopLine="104"/>
+        <Caret Line="153" Column="93" TopLine="140"/>
       </Position7>
       <Position8>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="118" Column="176" TopLine="105"/>
+        <Caret Line="154" Column="73" TopLine="140"/>
       </Position8>
       <Position9>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="117" Column="39" TopLine="104"/>
+        <Caret Line="153" Column="65" TopLine="145"/>
       </Position9>
       <Position10>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="152" Column="31" TopLine="136"/>
+        <Caret Line="131" Column="18" TopLine="121"/>
       </Position10>
       <Position11>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="156" Column="10" TopLine="139"/>
+        <Caret Line="154" Column="70" TopLine="141"/>
       </Position11>
       <Position12>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="153" Column="235" TopLine="140"/>
+        <Caret Line="155" Column="38" TopLine="142"/>
       </Position12>
       <Position13>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="152" Column="34" TopLine="139"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="305" Column="18" TopLine="292"/>
       </Position13>
       <Position14>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="153" Column="93" TopLine="140"/>
+        <Caret Line="4" Column="10" TopLine="1"/>
       </Position14>
       <Position15>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="154" Column="73" TopLine="140"/>
+        <Caret Line="5" Column="15" TopLine="1"/>
       </Position15>
       <Position16>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="153" Column="65" TopLine="145"/>
+        <Caret Line="4" Column="10" TopLine="1"/>
       </Position16>
       <Position17>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="131" Column="18" TopLine="121"/>
+        <Caret Line="177" Column="37" TopLine="152"/>
       </Position17>
       <Position18>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="154" Column="70" TopLine="141"/>
+        <Caret Line="27" Column="39" TopLine="13"/>
       </Position18>
       <Position19>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="155" Column="38" TopLine="142"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="104" Column="64" TopLine="93"/>
       </Position19>
       <Position20>
-        <Filename Value="grafika.pas"/>
-        <Caret Line="305" Column="18" TopLine="292"/>
+        <Filename Value="arkanoid.lpr"/>
+        <Caret Line="169" Column="70" TopLine="148"/>
       </Position20>
       <Position21>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="4" Column="10" TopLine="1"/>
+        <Caret Line="50" Column="14" TopLine="37"/>
       </Position21>
       <Position22>
         <Filename Value="arkanoid.lpr"/>
-        <Caret Line="5" Column="15" TopLine="1"/>
+        <Caret Line="27" Column="52" TopLine="14"/>
       </Position22>
       <Position23>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="4" Column="10" TopLine="1"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="401" Column="28" TopLine="373"/>
       </Position23>
       <Position24>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="177" Column="37" TopLine="152"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="62" Column="13" TopLine="48"/>
       </Position24>
       <Position25>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="27" Column="39" TopLine="13"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="381" Column="38" TopLine="364"/>
       </Position25>
       <Position26>
         <Filename Value="grafika.pas"/>
-        <Caret Line="165" Column="5" TopLine="244"/>
+        <Caret Line="465" Column="38" TopLine="451"/>
       </Position26>
       <Position27>
         <Filename Value="grafika.pas"/>
-        <Caret Line="104" Column="64" TopLine="93"/>
+        <Caret Line="464" Column="30" TopLine="451"/>
       </Position27>
       <Position28>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="169" Column="70" TopLine="148"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="465" Column="38" TopLine="451"/>
       </Position28>
       <Position29>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="50" Column="14" TopLine="37"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="466" Column="51" TopLine="452"/>
       </Position29>
       <Position30>
-        <Filename Value="arkanoid.lpr"/>
-        <Caret Line="27" Column="52" TopLine="14"/>
+        <Filename Value="grafika.pas"/>
+        <Caret Line="474" Column="41" TopLine="456"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

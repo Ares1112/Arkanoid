@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, podzespoly, statystyki, ustawienia
+  Forms, podzespoly, statystyki, ustawienia, Instr
   { you can add units after this };
 
 {$R *.res}
@@ -18,6 +18,7 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TStaty, Staty);
   Application.CreateForm(TUstawie, Ustawie);
+  Application.CreateForm(TInst, Inst);
   Application.Run;
 end.
 

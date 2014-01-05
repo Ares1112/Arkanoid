@@ -6,21 +6,23 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, dos, wincrt, statystyki, ustawienia;
+  ExtCtrls, dos, wincrt, statystyki, ustawienia, Instr;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
+    Instrukcja: TButton;
     Statystyki: TButton;
     Ustawienia: TButton;
     Graj: TButton;
     Wyjscie: TButton;
     Tlo: TImage;
     procedure GrajClick(Sender: TObject);
+    procedure InstrukcjaClick(Sender: TObject);
     procedure StatystykiClick(Sender: TObject);
+    procedure TloClick(Sender: TObject);
     procedure WyjscieClick(Sender: TObject);
     procedure UstawnieniaClick(Sender: TObject);
   private
@@ -52,6 +54,11 @@ begin
   Exec('..\arkanoid.exe','');
 end;
 
+procedure TForm1.InstrukcjaClick(Sender: TObject);
+begin
+  Inst.ShowModal();
+end;
+
 procedure TForm1.UstawnieniaClick(Sender: TObject);
 begin
   Ustawie.ShowModal();
@@ -74,6 +81,11 @@ begin
   Until (Eof(Plik)) OR (Wartownik = 12);
   CloseFile(Plik);
   Staty.ShowModal;
+end;
+
+procedure TForm1.TloClick(Sender: TObject);
+begin
+
 end;
 
 end.

@@ -1,10 +1,10 @@
 object Form1: TForm1
   Left = 320
-  Height = 405
-  Top = 254
+  Height = 541
+  Top = 118
   Width = 798
   Caption = 'Menu'
-  ClientHeight = 405
+  ClientHeight = 541
   ClientWidth = 798
   Icon.Data = {
     DE2800000000010001003232000001002000C828000016000000280000003200
@@ -339,9 +339,11 @@ object Form1: TForm1
   LCLVersion = '1.0.12.0'
   WindowState = wsMaximized
   object Wyjscie: TButton
+    AnchorSideTop.Control = Instrukcja
+    AnchorSideTop.Side = asrBottom
     Left = 50
     Height = 50
-    Top = 315
+    Top = 400
     Width = 698
     Align = alCustom
     Anchors = [akTop, akLeft, akRight]
@@ -357,13 +359,14 @@ object Form1: TForm1
     AnchorSideLeft.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 0
-    Height = 405
+    Height = 541
     Top = 0
     Width = 798
     Align = alRight
     Anchors = [akTop, akLeft, akBottom]
     AutoSize = True
     Center = True
+    OnClick = TloClick
     Picture.Data = {
       0A544A706567496D616765B3910000FFD8FFE000104A46494600010100000100
       010000FFDB008400030202080808080808080808080808080808080808080808
@@ -1587,5 +1590,23 @@ object Form1: TForm1
     Caption = 'Statystyki'
     OnClick = StatystykiClick
     TabOrder = 3
+  end
+  object Instrukcja: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Statystyki
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 50
+    Height = 50
+    Top = 310
+    Width = 698
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 50
+    BorderSpacing.Top = 40
+    BorderSpacing.Right = 50
+    Caption = 'Instrukcja'
+    OnClick = InstrukcjaClick
+    TabOrder = 4
   end
 end

@@ -52,21 +52,21 @@ type
   end;
 
 var
-  ruch_x, ruch_y: double;
+  ruch_x, ruch_y: double; //x,y pilki
   wektor_x, wektor_y: double;
   ilosc_zyc: shortint;
   bonus: integer; //ktory to bonus z kolei
   bonusy: array [1..50, 1..4] of integer; //zawiera bonusy ktore sie pojawily
   wynik: integer;
-  szybkosc_pilki: integer = 13;
+  szybkosc_pilki: integer = 15;
   koniec_gry: integer = 47; //ilosc pozostalych kafelkow
   memory: zglTMemory;
   texSerce: zglPTexture;
   fntMain: zglPFont;
   kafelki: array [1..50] of kafelek; //ma w sobie wszystkie kafelki
-  czesc : Array [1..1, 1..2] OF String; //uzywane w procedurze podziel_rekord
-  tablica_wynikow : ARRAY [1..50, 1..2] of String;//uzywane w sortuj_wyniki
-  zabezpieczenie : shortint = 1; //aby nie wywolywalo drugi raz sortuj_wyniki
+  czesc: array [1..1, 1..2] of string; //uzywane w procedurze podziel_rekord
+  tablica_wynikow: array [1..50, 1..2] of string;//uzywane w sortuj_wyniki
+  zabezpieczenie: shortint = 1; //aby nie wywolywalo drugi raz sortuj_wyniki
 
 procedure podziel_rekord(s: ansistring);
 var
@@ -86,75 +86,86 @@ begin
         czesc[1][1] := ss
       else if wart = 1 then
         czesc[1][2] := ss;
-      inc(wart);
+      Inc(wart);
       ss := '';
     end;
 end;
 
-procedure zapisz_wyniki(nowy : ansistring; zakres : Integer);
+procedure zapisz_wyniki(nowy: ansistring; zakres: integer);
 var
-  Wartownik : Integer;
-  Linia : String;
-  Plik : TextFile;
-  i,j : Integer;
-  zabez : shortint = 1;
+  Wartownik: integer;
+  Linia: string;
+  Plik: TextFile;
+  i, j: integer;
+  zabez: shortint = 1;
   //zamien : array [1..50, 1..2] of String;
 begin
   podziel_rekord(nowy);
   Wartownik := 1;
-  AssignFile(Plik,PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) )+'pliki\statystyki.txt');
-  {$I-};
+  AssignFile(Plik, PAnsiChar(zgl_Get(DIRECTORY_APPLICATION)) + 'pliki\statystyki.txt');
+  {$I-}
+  ;
   Append(Plik);
-  {$I+};
+  {$I+}
+  ;
   Reset(Plik);
-  Repeat
+  repeat
     if Wartownik = 1 then
-      begin
-        Readln(Plik,Linia);
-        Rewrite(Plik);
-        Writeln(Plik, StrToInt(Linia) + 1);
-        Inc(Wartownik);
-      end
-    else if Wartownik > 1 then begin
+    begin
+      Readln(Plik, Linia);
+      Rewrite(Plik);
+      Writeln(Plik, StrToInt(Linia) + 1);
+      Inc(Wartownik);
+    end
+    else if Wartownik > 1 then
+    begin
 
-      if (StrToInt(czesc[1][1]) > StrToInt(tablica_wynikow[Wartownik][1])) and (zabez <> 0) then begin
-        Writeln(Plik,czesc[1][1]+' '+czesc[1][2]);
+      if (StrToInt(czesc[1][1]) > StrToInt(tablica_wynikow[Wartownik][1])) and
+        (zabez <> 0) then
+      begin
+        Writeln(Plik, czesc[1][1] + ' ' + czesc[1][2]);
         zabez := 0;
       end
-      else begin
-        Writeln(Plik, tablica_wynikow[Wartownik][1] +' '+ tablica_wynikow[Wartownik][2]);
+      else
+      begin
+        Writeln(Plik, tablica_wynikow[Wartownik][1] + ' ' +
+          tablica_wynikow[Wartownik][2]);
         Inc(Wartownik);
       end;
     end;
-  Until Wartownik = 12;
+  until Wartownik = 12;
   CloseFile(Plik);
 end;
 
-procedure sortuj_wyniki(nowy : ansistring);
-  VAR
+procedure sortuj_wyniki(nowy: ansistring);
+var
   Plik: TextFile;
   Linia: ansistring;
-  Wartownik : shortint = 1;
-  i,j : Integer;
-  trick : integer;
+  Wartownik: shortint = 1;
+  i, j: integer;
+  trick: integer;
   //zamien : array [1..50, 1..2] of ansistring;
 
 begin
-AssignFile(Plik, PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) )+'pliki\statystyki.txt');
-  {$I-};
+  AssignFile(Plik, PAnsiChar(zgl_Get(DIRECTORY_APPLICATION)) + 'pliki\statystyki.txt');
+  {$I-}
+  ;
   Append(Plik);
-  {$I+};
-  If IOResult <> 0 Then Rewrite(Plik);
+  {$I+}
+  ;
+  if IOResult <> 0 then
+    Rewrite(Plik);
   Reset(Plik);
-  Repeat
-    Readln(Plik,Linia);
-      if Wartownik > 1 then begin
-        podziel_rekord(Linia);
-        tablica_wynikow[wartownik][1] := czesc[1][1];
-        tablica_wynikow[wartownik][2] := czesc[1][2];
-      end;
+  repeat
+    Readln(Plik, Linia);
+    if Wartownik > 1 then
+    begin
+      podziel_rekord(Linia);
+      tablica_wynikow[wartownik][1] := czesc[1][1];
+      tablica_wynikow[wartownik][2] := czesc[1][2];
+    end;
     Inc(Wartownik);
-  Until (Eof(Plik));
+  until (EOF(Plik));
   CloseFile(Plik);{ stwierdzam, ze nie dziala bo pascal
   for j := 2 to wartownik-2 do begin
     for i := 2 to wartownik-2 do begin
@@ -162,7 +173,7 @@ AssignFile(Plik, PAnsiChar( zgl_Get( DIRECTORY_APPLICATION ) )+'pliki\statystyki
         tablica_wynikow[i+20] := tablica_wynikow[i]; tablica_wynikow[i] := tablica_wynikow[i+1]; tablica_wynikow[i+1] := tablica_wynikow[i+20];
     end;
   end;}
-  zapisz_wyniki(nowy,wartownik);
+  zapisz_wyniki(nowy, wartownik);
 end;
 
 procedure wczytaj_kafelki();
@@ -402,7 +413,8 @@ begin
     text_DrawEx(fntMain, Ceil(szerokosc / 5), Ceil(wysokosc / 2), 2,
       1, 'Koniec gry, wynik: ' + IntToStr(wynik) + '  Nacisnij ESC aby wyjsc',
       255, $000000, 0);
-    if zabezpieczenie <> 0 then begin
+    if zabezpieczenie <> 0 then
+    begin
       sortuj_wyniki(IntToStr(wynik) + ' ' + pseudonim);
       zabezpieczenie := 0;
     end;
@@ -461,6 +473,13 @@ end;
 procedure Timer_paletka;
 begin
   steruj_paletka();
+  //autopilot
+  if (autopilot = 1) then
+  begin
+    pal_x := Ceil(ruch_x) - Ceil(dlugosc_paletki/2);
+    if (pal_x >= szerokosc-dlugosc_paletki) then pal_x := szerokosc-dlugosc_paletki
+    else if pal_x <= 0 then pal_x := 0
+  end;
 end;
 
 procedure Timer_bonus_skoncz; //odlicza 10 sekund do zniszczenia bonusu
